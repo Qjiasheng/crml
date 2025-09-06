@@ -60,19 +60,19 @@
                 <a href="https://qjiasheng.github.io/" target="_blank">Jiasheng Qu</a><sup>1</sup>,</span>
                 <span class="author-block">
                   <!-- <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Zhuo Huang</a><sup>1, 3</sup>,</span> -->
-                   Zhuo Huang<sup>1, 3</sup>,</span>
+                   Zhuo Huang<sup>1, 2</sup>,</span>
                   <span class="author-block">
                     Dezhao Guo<sup>1</sup>, </span>
                     <span class="author-block">
                     Hailin Sun<sup>1</sup>, </span>
                     <span class="author-block">
-                    Aoran Lyu<sup>3</sup>, </span>
+                    Aoran Lyu<sup>2</sup>, </span> <br>
                     <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=tshoGOoAAAAJ&hl=en&oi=sra" target="_blank">Chengkai Dai</a><sup>2</sup>, </span>
+                    <a href="https://scholar.google.com/citations?user=tshoGOoAAAAJ&hl=en&oi=sra" target="_blank">Chengkai Dai</a><sup>3</sup>, </span>
                     <span class="author-block">
-                    Yeung Yam<sup>1,2</sup>, </span>
+                    Yeung Yam<sup>1,3</sup>, </span>
                     <span class="author-block">
-                    <a href="https://guoxinfang.github.io/" target="_blank">Guoxin Fang</a><sup>1, 2, *</sup> </span>
+                    <a href="https://guoxinfang.github.io/" target="_blank">Guoxin Fang</a><sup>1, 3, *</sup> </span>
                   </div>
                   
 
@@ -81,8 +81,8 @@
                       <p style="color:red;">SIGGRAPH Asia 2025 (ACM Transactions on Graphics)<br></p>
                       <p class="tiny-text">
                       <sup>1</sup>The Chinese University of Hong Kong, China.<br>
-                      <sup>2</sup>Centre for Perceptual and Interactive Intelligence, Hong Kong, China. <br> 
-                      <sup>3</sup>The University of Manchester, Manchester, United Kingdom. <br>
+                      <sup>2</sup>The University of Manchester, Manchester, United Kingdom. <br>
+                      <sup>3</sup>Centre for Perceptual and Interactive Intelligence, Hong Kong, China. <br> 
                       <!-- <sup>*</sup>guoxinfang@cuhk.edu.hk  -->
                     </p> </span>
                   </div>
@@ -113,7 +113,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/Qjiasheng/INF-3DP" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -145,12 +145,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="/static/images/teaser.png" alt="Teaser Image"
+      <img src="static/images/teaser.png" 
       class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
         <p class="very-tiny-text">  
-       We present INF-3DP, a computational framework leveraging Implicit Neural Fields (INFs) to optimize toolpath generation and plan global collision-free motion for multi-axis 3D printing. 
-       (a) Given various types of geometric model as input, signed distance field (SDF) is used as a volumetric representation, which enables (b, c) seamless optimization of a guidance field across both 2-manifold (surface) and 3-manifold (volume) domains with fabrication-aware objectives. Toolpaths for both the shell and infill structures are then generated using field interpolation based on the guidance and (d) infill fields. (e) Effective modeling of the dynamically evolving printed object via process-dependent time-varying SDF, which supports (f) differentiable global collision-free motion planning. (g) The computational result drives successful physical fabrication with a robot-assisted setup. 
-      (h) compared to existing resolution-dependent mesh-based solutions, our method offers superior computational scalability for large-scale problems while maintaining high precision in the generated waypoints.
+         We present INF-3DP, a computational framework that utilizes Implicit Neural Fields (INFs) to optimize toolpath generation and 
+         enable collision-free motion planning for multi-axis 3D printing.
+         INF-3DP can achieve scalable, precise toolpath generation and collision-free motion planning, enabling successful robot-assisted fabrication.
       </p> 
     </div>
   </div>
@@ -199,7 +199,8 @@
       </div>
       <!-- Centered Text Below -->
       <div class="center-text" style="text-align: center; margin-top: 20px;">
-        <p style="font-size: 1.2em; font-weight: bold;">Training-free time-varying SDF of printing process, supports differentiable collision optimization. </p>
+        <p style="font-size: 1.2em; font-weight: bold;">Training-free time-varying SDF for dynamic printing object modeling, enables differentiable motion planning 
+          for collision avoidance. </p>
       </div>
     </div>
   </div>

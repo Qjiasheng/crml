@@ -69,7 +69,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">INF-3DP: Implicit Neural Fields for Collision-Free Multi-Axis 3D Printing</h1>
+            <h1 class="title is-1 publication-title" style="font-size: 1.9rem;">INF-3DP: Implicit Neural Fields for Collision-Free Multi-Axis 3D Printing</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -164,89 +164,16 @@
     <div class="hero-body">
       <img src="static/images/teaser.png" 
       class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
-        <p class="very-tiny-text">  
-         We present INF-3DP, a computational framework that utilizes Implicit Neural Fields (INFs) to optimize toolpath generation and 
-         enable collision-free motion planning for multi-axis 3D printing.
-         INF-3DP can achieve scalable, precise toolpath generation and collision-free motion planning, enabling successful robot-assisted fabrication.
+        <p class="tiny-text">  
+        We introduce a general, scalable computational framework for multi-axis 3D printing based on implicit neural fields (INFs) that unifies all stages of 
+        toolpath generation and global collision-free motion planning. Compared to explicit-representation-based methods, INF-3DP achieves up to two orders of 
+        magnitude speedup and significantly reduces waypoint-to-surface error - <b>it can handle millions of waypoints with differentiable collision-free planning 
+        in seconds with the help of GPU-based parallel computing. </b>
       </p> 
     </div>
   </div>
 </section>
 <!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We introduce a general, scalable computational framework for multi-axis 3D printing based on implicit neural fields (INFs) that unifies all stages of toolpath generation and global collision-free motion planning. 
-            In our pipeline, input models are represented as signed distance fields, with fabrication objectives—such as support-free printing, surface finish quality, and extrusion control—directly encoded in the optimization of an implicit guidance field. This unified approach enables toolpath optimization across both surface and interior domains, allowing shell and infill paths to be generated via implicit field interpolation.
-            The printing sequence and multi-axis motion are then jointly optimized over a continuous quaternion field. Our continuous formulation constructs the evolving printing object as a time-varying SDF, supporting differentiable global collision handling throughout INF-based motion planning.
-            Compared to explicit-representation-based methods, INF-3DP achieves up to two orders of magnitude speedup and significantly reduces waypoint-to-surface error. We validate our framework on diverse, complex models and demonstrate its efficiency with physical fabrication experiments using a robot-assisted multi-axis system.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-max-desktop" style="background-color: white;">
-  <div class="hero-body" style="background-color: white; padding: 20px;">
-    <div class="container" style="background-color: white; padding: 20px;">
-      <!-- Video Row -->
-      <div class="video-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%; background-color: white; padding: 10px;">
-        <!-- Left Video (Cropped GIF) -->
-        <div class="item" style="flex: 1; margin-right: 5px; background-color: white;">
-          <img src="static/images/bunny.gif" alt="bunny gif" loading="lazy"
-               style="width: 100%; height: auto; clip-path: inset(0px 53px 0px 45px); -webkit-clip-path: insetinset(0px 53px 0px 45px);" />
-        </div>
-        <!-- Right Video (Cropped GIF) -->
-        <div class="item" style="flex: 1; margin-left: 5px; background-color: white;">
-          <img src="static/images/fer.gif" alt="fer gif"  loading="lazy"
-               style="width: 100%; height: auto; clip-path: inset(2px 0px 2px 0px); -webkit-clip-path: inset(2px 0px 2px 0px);" />
-        </div>
-      </div>
-      <!-- Centered Text Below -->
-      <div class="center-text" style="text-align: center; margin-top: 20px; background-color: white; padding: 10px;">
-        <p style="font-size: 1.2em; font-weight: bold; background-color: white;">
-          Training-free time-varying SDF for dynamic printing object modeling, enables differentiable motion planning 
-          for collision avoidance.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End image carousel -->
-
-<section class="section hero is-small">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3">INF-3DP framework</h2>
-         <p>
-              <img src="static/images/framework.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
-            </p>
-            <p class="very-tiny-text">  
-             The computational pipeline of INF-3DP. 
-             (a) Begins with representing the printing model as a point cloud for training, (b) a SDF is computed as an implicit volumetric representation of the model. 
-             (c) Guidance fields are then optimized with fabrication-aware objectives on both the surface (2-manifold) and interior (3-manifold) domains, 
-             (d) guiding Reeb-graph-based partitions to ensure printing continuity. (e) Infill and density fields are constructed for variable density infill, 
-             (f) and the optimized printing sequence field is established. (g) By evaluating the time-varying SDF, the shape of the object at each stage of printing 
-             is approximate, enabling efficient global collision detection. (h) Differentiable quaternion field optimization is then applied for collision-free and 
-             smooth motion planning. (I) The final fabrication plan, visualized as streamlines of the motion frame field, integrates all optimized fields to ensure support-free, high-quality, and collision-free multi-axis 3DP.
-            </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="hero is-small is-light">
   <div class="hero-body">
@@ -271,6 +198,82 @@
   </div>
 </section>
 
+<!-- Paper abstract -->
+<!-- <section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce a general, scalable computational framework for multi-axis 3D printing based on implicit neural fields (INFs) that unifies all stages of toolpath generation and global collision-free motion planning. 
+            In our pipeline, input models are represented as signed distance fields, with fabrication objectives—such as support-free printing, surface finish quality, and extrusion control—directly encoded in the optimization of an implicit guidance field. This unified approach enables toolpath optimization across both surface and interior domains, allowing shell and infill paths to be generated via implicit field interpolation.
+            The printing sequence and multi-axis motion are then jointly optimized over a continuous quaternion field. Our continuous formulation constructs the evolving printing object as a time-varying SDF, supporting differentiable global collision handling throughout INF-based motion planning.
+            Compared to explicit-representation-based methods, INF-3DP achieves up to two orders of magnitude speedup and significantly reduces waypoint-to-surface error. We validate our framework on diverse, complex models and demonstrate its efficiency with physical fabrication experiments using a robot-assisted multi-axis system.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="hero is-max-desktop">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Video Row -->
+      <div class="video-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+        <!-- Left Video -->
+        <div class="item" style="flex: 1; margin-right: 5px;">
+          <video poster="" id="video1" autoplay controls muted loop style="width: 100%; height: 300px; object-fit: contain; background-color: white;">
+            <source src="static/images/bunny_sdf_o.mp4" type="video/mp4">
+          </video>
+        </div>
+        <!-- Right Video -->
+        <div class="item" style="flex: 1; margin-left: 5px;">
+          <video poster="" id="video2" autoplay controls muted loop style="width: 100%; height: 300px; object-fit: contain; background-color: white;">
+            <source src="static/images/fer_sdf_o.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <!-- Centered Text Below -->
+      <div class="center-text" style="text-align: center; margin-top: 20px;">
+        <p style="font-size: 1.0em; font-weight: bold;">Training-free time-varying SDF for dynamic printing object modeling, enables differentiable motion planning 
+          for collision avoidance. </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End image carousel -->
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <div class="content">
+          <h2 class="title is-3">INF-3DP Framework</h2>
+         <p>
+              <img src="static/images/framework.png" alt="Directional Weight Score" class="blend-img-background center-image" style="max-width: 100%; height: auto;" />
+            </p>
+            <p class="very-tiny-text">  
+             The computational pipeline of INF-3DP. 
+             (a) Begins with representing the printing model as a point cloud for training, (b) a SDF is computed as an implicit volumetric representation of the model. 
+             (c) Guidance fields are then optimized with fabrication-aware objectives on both the surface (2-manifold) and interior (3-manifold) domains, 
+             (d) guiding Reeb-graph-based partitions to ensure printing continuity. (e) Infill and density fields are constructed for variable density infill, 
+             (f) and the optimized printing sequence field is established. (g) By evaluating the time-varying SDF, the shape of the object at each stage of printing 
+             is approximate, enabling efficient global collision detection. (h) Differentiable quaternion field optimization is then applied for collision-free and 
+             smooth motion planning. (I) The final fabrication plan, visualized as streamlines of the motion frame field, integrates all optimized fields to ensure support-free, high-quality, and collision-free multi-axis 3DP.
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <section class="section hero is-small">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
@@ -281,19 +284,21 @@
         </div>
       </div>
     </div>
-    <!-- Images Row -->
+    <!-- Videos Row -->
     <div class="columns is-centered" style="display: flex; justify-content: space-between; align-items: center;">
-      <!-- Left Image -->
+      <!-- Left Video -->
       <div class="column is-half" style="display: flex; justify-content: center; align-items: center; background-color: white; padding: 10px;">
-        <img src="static/images/reduced_fer_print.gif" alt="Fabrication 1" loading="lazy"
-          style="max-width: 150%; max-height: 150%; width: auto; height: auto; object-fit: contain; background-color: white;
-           clip-path: inset(0 23% 0 23%); -webkit-clip-path: inset(0 23% 0 23%);" />
+        <video poster="" id="video1" autoplay controls muted loop style="width: 140%; max-width: 200%; height: auto; object-fit: contain; background-color: white;
+            clip-path: inset(0 23% 0 23%); -webkit-clip-path: inset(0 23% 0 23%);">
+          <source src="static/images/fer.mp4" type="video/mp4">
+        </video>
       </div>
-      <!-- Right Image -->
+      <!-- Right Video -->
       <div class="column is-half" style="display: flex; justify-content: center; align-items: center; background-color: white; padding: 10px;">
-        <img src="static/images/reduced_bracket.gif" alt="Fabrication 2" loading="lazy"
-          style="max-width: 150%; max-height: 150%; width: auto; height: auto; object-fit: contain; background-color: white;
-           clip-path: inset(0 25% 0 20%); -webkit-clip-path: inset(0 25% 0 20%);" />
+        <video poster="" id="video2" autoplay controls muted loop style="width: 140%; max-width: 200%; height: auto; object-fit: contain; background-color: white;
+            clip-path: inset(0 23% 0 23%); -webkit-clip-path: inset(0 23% 0 23%);">
+          <source src="static/images/bracket.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>

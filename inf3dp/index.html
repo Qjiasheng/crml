@@ -43,10 +43,26 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <style>
+    html {
+      font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+      html {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      html {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
-
-
 
   <section class="hero">
     <div class="hero-body">
@@ -83,6 +99,7 @@
                       <sup>1</sup>The Chinese University of Hong Kong, China.<br>
                       <sup>2</sup>The University of Manchester, Manchester, United Kingdom. <br>
                       <sup>3</sup>Centre for Perceptual and Interactive Intelligence, Hong Kong, China. <br> 
+                      <sup>*</sup>Corresponding author: guoxinfang@cuhk.edu.hk <br> 
                       <!-- <sup>*</sup>guoxinfang@cuhk.edu.hk  -->
                     </p> </span>
                   </div>
@@ -179,28 +196,28 @@
 
 
 <!-- Image carousel -->
-<section class="hero is-max-desktop">
-  <div class="hero-body">
-    <div class="container">
+<section class="hero is-max-desktop" style="background-color: white;">
+  <div class="hero-body" style="background-color: white; padding: 20px;">
+    <div class="container" style="background-color: white; padding: 20px;">
       <!-- Video Row -->
-      <div class="video-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-        <!-- Left Video -->
-        <div class="item" style="flex: 1; margin-right: 5px;">
-          <video poster="" id="video1" autoplay controls muted loop style="width: 100%; height: 300px; object-fit: contain; background-color: white;">
-            <source src="static/videos/bunny_sdf.mp4" type="video/mp4">
-          </video>
+      <div class="video-row" style="display: flex; justify-content: space-between; align-items: center; width: 100%; background-color: white; padding: 10px;">
+        <!-- Left Video (Cropped GIF) -->
+        <div class="item" style="flex: 1; margin-right: 5px; background-color: white;">
+          <img src="static/images/bunny.gif" alt="bunny gif" 
+               style="width: 100%; height: auto; clip-path: inset(0px 53px 0px 45px); -webkit-clip-path: insetinset(0px 53px 0px 45px);" />
         </div>
-        <!-- Right Video -->
-        <div class="item" style="flex: 1; margin-left: 5px;">
-          <video poster="" id="video2" autoplay controls muted loop style="width: 100%; height: 300px; object-fit: contain; background-color: white;">
-            <source src="static/videos/fer_sdf.mp4" type="video/mp4">
-          </video>
+        <!-- Right Video (Cropped GIF) -->
+        <div class="item" style="flex: 1; margin-left: 5px; background-color: white;">
+          <img src="static/images/fer.gif" alt="fer gif" 
+               style="width: 100%; height: auto; clip-path: inset(2px 0px 2px 0px); -webkit-clip-path: inset(2px 0px 2px 0px);" />
         </div>
       </div>
       <!-- Centered Text Below -->
-      <div class="center-text" style="text-align: center; margin-top: 20px;">
-        <p style="font-size: 1.2em; font-weight: bold;">Training-free time-varying SDF for dynamic printing object modeling, enables differentiable motion planning 
-          for collision avoidance. </p>
+      <div class="center-text" style="text-align: center; margin-top: 20px; background-color: white; padding: 10px;">
+        <p style="font-size: 1.2em; font-weight: bold; background-color: white;">
+          Training-free time-varying SDF for dynamic printing object modeling, enables differentiable motion planning 
+          for collision avoidance.
+        </p>
       </div>
     </div>
   </div>
@@ -231,19 +248,17 @@
   </div>
 </section>
 
-
-<!-- Youtube video -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <!-- Paper video. -->
+      <!-- Paper video -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-full" style="max-width: 800px;">
-          <div class="publication-video" style="position: relative; margin: 0 auto;">
+          <div class="publication-video" style="position: relative; margin: 0 auto; width: 100%; ">
             <!-- YouTube embed code -->
             <iframe 
-              src="https://www.youtube.com/embed/JkaxUblCGz0" 
+              src="https://www.youtube.com/embed/uhsC-nGu0lw" 
               frameborder="0" 
               allow="autoplay; encrypted-media" 
               allowfullscreen 
@@ -255,7 +270,6 @@
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
 <section class="section hero is-small">
   <div class="container is-max-desktop">
@@ -263,21 +277,23 @@
       <!-- Title -->
       <div class="column is-full">
         <div class="content">
-          <h2 class="title is-3">Physical fabricated models enabled by INF-3DP</h2>
+          <h2 class="title is-3">Physical fabrication</h2>
         </div>
       </div>
     </div>
     <!-- Images Row -->
-    <div class="columns is-centered" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <div class="columns is-centered" style="display: flex; justify-content: space-between; align-items: center;">
       <!-- Left Image -->
       <div class="column is-half" style="display: flex; justify-content: center; align-items: center; background-color: white; padding: 10px;">
-        <img src="static/images/physical.jpg" alt="Fabrication 1"
-          style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; background-color: white;" />
+        <img src="static/images/fer_print.gif" alt="Fabrication 1"
+          style="max-width: 150%; max-height: 150%; width: auto; height: auto; object-fit: contain; background-color: white;
+           clip-path: inset(0 23% 0 23%); -webkit-clip-path: inset(0 23% 0 23%);" />
       </div>
       <!-- Right Image -->
       <div class="column is-half" style="display: flex; justify-content: center; align-items: center; background-color: white; padding: 10px;">
-        <img src="static/images/fabError.png" alt="Fabrication 2"
-          style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; background-color: white;" />
+        <img src="static/images/bracket.gif" alt="Fabrication 2"
+          style="max-width: 150%; max-height: 150%; width: auto; height: auto; object-fit: contain; background-color: white;
+           clip-path: inset(0 25% 0 20%); -webkit-clip-path: inset(0 25% 0 20%);" />
       </div>
     </div>
   </div>
